@@ -1,1 +1,1 @@
-project sakura
+project sakura public release
