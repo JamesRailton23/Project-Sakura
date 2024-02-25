@@ -1,0 +1,129 @@
+{% extends 'template.html' %}
+
+{% block head %}
+    <title>View All Locations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/view_all_locations.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-lg bg-dark my-5 p-3 rounded shadow">
+        <div class="p-3 text-center p-3 bg-light rounded">
+            <h3 class="fw-bold text-decoration-underline">View items by location</h3>
+            <p>Choose the location and view its stored items</p>
+            <form method="POST" action="/view_all_locations_to_portal">
+                <button type="submit" class="btn btn-primary buttons">Go Back</button>
+            </form>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/left_cupboard.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Left Cupboard</h3>
+                                <form method="POST" action="/view_cupboard_left">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/right_cupboard.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Right Cupboard</h3>
+                                <form method="POST" action="/view_cupboard_right">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/fridge.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Fridge</h3>
+                                <form method="POST" action="/view_fridge">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/large_freezer.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Large Freezer</h3>
+                                <form method="POST" action="/view_large_freezer">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/small_freezer.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Small Freezer</h3>
+                                <form method="POST" action="/view_small_freezer">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/pictures/view_all/pantry.jpeg" class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Pantry</h3>
+                                <form method="POST" action="/view_pantry">
+                                    <button type="submit" class="btn btn-primary buttons">View</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+
+{% block head %}
+    <title>Project Sakura</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css')}}">
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex min-vh-100 background">
+        <div class="align-self-center text-center text-light col-md-8 offset-md-2">
+            <div class="mb-4 bg-dark rounded p-3">
+               <div>
+                   <h1 class="display-1 top">Project Sakura</h1>
+                   <h4 class="p-3">Project Sakura is an inventory management system that allows to keep track of all your food items within your cupboard, pantry, fridge or freezer just by scanning its barcode</h4>
+                   <div class="content-align-center">
+                       <form action="/login">
+                           <button class="sign_in_with_google" type="submit">
+                            <img src="../static/pictures/index/web_light_sq_SI.svg" alt="" class="sign_in_with_google_image">
+                        </button>
+                       </form>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

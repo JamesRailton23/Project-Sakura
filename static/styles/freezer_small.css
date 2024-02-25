@@ -1,0 +1,20 @@
+.buttons {
+    height: 50px;
+    width: 100px;
+}
+
+.background {
+    background: url(../pictures/backgrounds/background5.jpg) no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.table-area {
+    background: rgb(44, 53, 57);
+}
+
+.item_table {
+    font-size: 20px;
+    --bs-table-color: #fff;
+    --bs-table-bg: #212529;
+}

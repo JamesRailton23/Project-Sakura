@@ -1,0 +1,82 @@
+{% extends 'template.html' %}
+
+{% block head %}
+    <title>Add New Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/add_item.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-lg my-5 rounded shadow bg-light">
+        <div class="p-3 p-lg-4">
+            <div class="row align-content-center justify-content-center text-center bg-dark text-white p-4 mb-3 rounded">
+                <h1 class="display-4 text-decoration-underline">Add New Item</h1>
+                <p>Please fill out the sections in order, to add the item either just scan the barcode or press the
+                    green button at the bottom</p>
+                <form method="POST" action="/add_item_to_portal">
+                    <button type="submit" class="btn btn-primary buttons">Go Back</button>
+                </form>
+            </div>
+            <form action="/add_new_item" method="POST">
+                <div class="row area-background p-3 rounded">
+                    <div class="col-12">
+                        <div class="card text-center my-2 d-flex flex-column">
+                            <div class="card-body mt-auto">
+                                <h5 class="card-title text-decoration-underline fw-bold">Storage Location</h5>
+                                <p>Please select the storage location of the item from the list below</p>
+                                <label>
+                                    <select name="ddl_location" class="form-control-lg bg-secondary-subtle"
+                                            style="width: 100%;">
+                                        <option value="Left Cupboard">Left Cupboard</option>
+                                        <option value="Right Cupboard">Right Cupboard</option>
+                                        <option value="Large Freezer">Large Freezer</option>
+                                        <option value="Small Freezer">Small Freezer</option>
+                                        <option value="Fridge">Fridge</option>
+                                        <option value="Pantry">Pantry</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card text-center my-2 d-flex flex-column">
+                            <div class="card-body mt-auto">
+                                <h5 class="card-title text-decoration-underline fw-bold">Expiry Date (Optional)</h5>
+                                <p>Please add the expiry date of the item</p>
+                                <label>
+                                    <input type="date" name="cal_expiry_date"
+                                           class="form-control-lg bg-secondary-subtle"
+                                           style="width: 100%;">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card text-center my-2 d-flex flex-column">
+                            <div class="card-body mt-auto">
+                                <h5 class="card-title text-decoration-underline fw-bold">Item Barcode</h5>
+                                <p>Please highlight the text-box below and then scan or enter the barcode of the item
+                                    along with the @ symbol at the start and end of the barcode</p>
+                                <label>
+                                    <input type="text" name="tbx_barcode" class="form-control-lg tb bg-secondary-subtle"
+                                           style="width: 100%;">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center align-content-center justify-content-center bg-dark p-5 rounded mt-3">
+                    <div>
+                        <button type="submit" class="btn btn-success mb-3" style="width: 200px; height: 75px;">ADD NEW
+                            ITEM
+                        </button>
+                    </div>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}" style="width: 350px">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

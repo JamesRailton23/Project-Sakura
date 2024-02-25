@@ -1,0 +1,23 @@
+@font-face {
+    font-family: LondonUndergound; src: url('../fonts/London Underground Medium.ttf');
+}
+.top{
+    font-family: LondonUndergound;
+    text-decoration: underline;
+}
+.login-button{
+    height: 50px; width: 250px;
+}
+.background {
+    background: url(../pictures/index/fridge.jpg) no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.sign_in_with_google{
+    background: none;
+    border: none;
+}
+.sign_in_with_google_image{
+    width: 306px;
+    height: 70px;
+}

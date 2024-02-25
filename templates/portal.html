@@ -1,0 +1,63 @@
+{% extends 'template.html' %}
+
+{% block head %}
+    <title>User Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/portal.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container-lg bg-dark my-5 p-3 rounded shadow">
+        <div class="p-3">
+            <div class="align-content-center p-3 mb-4 justify-content-center text-center bg-light rounded">
+                <h1 class="display-6 text-decoration-underline">Hello! - {{ name }}</h1>
+                <h4>Select an option</h4>
+            </div>
+            <div class="card-group gap-3">
+                <div class="card text-center rounded">
+                    <img src="../static/pictures/portal/add_new.jpg" class="card-img-top card_images"
+                         alt="add new image">
+                    <div class="card-body d-flex flex-column justify-content-center align-content-center">
+                        <h5 class="card-title fw-bold text-decoration-underline">Add New Items</h5>
+                        <form method="POST" action="/redirect_add_item">
+                            <button type="submit" class="btn btn-primary buttons">View</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card text-center rounded">
+                    <img src="../static/pictures/portal/view_all.jpg" class="card-img-top card_images"
+                         alt="view all image">
+                    <div class="card-body d-flex flex-column justify-content-center align-content-center">
+                        <h5 class="card-title fw-bold text-decoration-underline">View All Items</h5>
+                        <form method="POST" action="/redirect_view_all_locations">
+                            <button type="submit" class="btn btn-primary buttons">View</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card text-center rounded">
+                    <img src="../static/pictures/portal/view_item.jpg" class="card-img-top card_images"
+                         alt="view an item image">
+                    <div class="card-body d-flex flex-column justify-content-center align-content-center">
+                        <h5 class="card-title fw-bold text-decoration-underline">View An Item</h5>
+                        <form method="POST" action="/redirect_view_item">
+                            <button type="submit" class="btn btn-primary buttons">View</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-5 mb-3 bg-light p-3 rounded-pill">
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <h5 class="fw-bold text-decoration-underline">Logout</h5>
+                        <form method="POST" action="/logout">
+                            <button class="system_sign_out">
+                                <img src="../static/pictures/portal/account-logout-xxl-2.jpg"
+                                     alt="system_sign_out_image" class="system_sign_out_image">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

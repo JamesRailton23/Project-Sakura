@@ -1,0 +1,10 @@
+.buttons {
+    height: 50px;
+    width: 100px;
+}
+
+.background {
+    background: url(../pictures/backgrounds/background4.jpg) no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+}

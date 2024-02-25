@@ -1,0 +1,18 @@
+.buttons {
+    height: 50px;
+    width: 100px;
+}
+
+.background {
+    background: url(../pictures/backgrounds/background5.jpg) no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.barcode-area {
+    background: rgb(44, 53, 57);
+}
+
+.tb {
+    width: 500px;
+}
